@@ -12,7 +12,7 @@
 		//hash the password
 		$pass = hash("sha512", $pass);
 		
-		$mysql = new mysqli("localhost", $GLOBALS["db_username"], $GLOBALS["db_password"], "webpr2016_romil");
+		$mysql = new mysqli("localhost", $GLOBALS["db_username"], $GLOBALS["db_password"], "webpr2016_askaks");
 		
 		$stmt = $mysql->prepare("SELECT id FROM users WHERE username=? and password=?");
 		
@@ -51,7 +51,7 @@
 		
 		
 		// GLOBALS - access outside variable in function
-		$mysql = new mysqli("localhost", $GLOBALS["db_username"], $GLOBALS["db_password"], "webpr2016_romil");
+		$mysql = new mysqli("localhost", $GLOBALS["db_username"], $GLOBALS["db_password"], "webpr2016_askaks");
 		
 		$stmt = $mysql->prepare("INSERT INTO users (username, password) VALUES (?, ?) ");
 		
@@ -69,7 +69,7 @@
 
 
 
-	/*$name = "Romil";
+	/*$name = "askaks";
 	
 	hello($name, "thursday", 7);
 	hello("Toomas", "esmaspäev", 1);
